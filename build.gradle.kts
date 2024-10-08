@@ -66,10 +66,10 @@ val injectedPackageUid by extra(2000)
 val defaultManagerPackageName by extra("org.lsposed.manager")
 val verCode by extra(commitCount)
 val verName by extra(latestTag)
-val androidTargetSdkVersion by extra(35)
+val androidTargetSdkVersion by extra(34)
 val androidMinSdkVersion by extra(27)
-val androidBuildToolsVersion by extra("35.0.2")
-val androidCompileSdkVersion by extra(35)
+val androidBuildToolsVersion by extra("34.0.0")
+val androidCompileSdkVersion by extra(34)
 val androidCompileNdkVersion by extra("26.1.10909125")
 val androidSourceCompatibility by extra(JavaVersion.VERSION_17)
 val androidTargetCompatibility by extra(JavaVersion.VERSION_17)
@@ -104,13 +104,7 @@ subprojects {
                 abortOnError = true
                 checkReleaseBuilds = false
             }
-            kotlinOptions {
-                 jvmTarget=androidSourceCompatibility
-            }
-            java {
-                sourceCompatibility = androidSourceCompatibility
-                targetCompatibility = androidSourceCompatibility
-            }
+
             compileOptions {
                 sourceCompatibility = androidSourceCompatibility
                 targetCompatibility = androidTargetCompatibility
